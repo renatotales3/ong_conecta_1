@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#eafaf1" />
+  <circle cx="100" cy="100" r="30" fill="#3498db" />
+  <circle cx="200" cy="100" r="30" fill="#9b59b6" />
+  <circle cx="300" cy="100" r="30" fill="#e74c3c" />
+  <path d="M70 140 Q100 180 130 140" stroke="#3498db" stroke-width="5" fill="none"/>
+  <path d="M170 140 Q200 180 230 140" stroke="#9b59b6" stroke-width="5" fill="none"/>
+  <path d="M270 140 Q300 180 330 140" stroke="#e74c3c" stroke-width="5" fill="none"/>
+  <text x="200" y="180" font-family="Arial" font-size="16" text-anchor="middle" fill="#7f8c8d">Junte-se a nós</text>
+</svg>

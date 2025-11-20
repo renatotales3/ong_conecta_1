@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e8f6f3" />
+  <path d="M50 250 L150 100 L250 250 Z" fill="#27ae60" />
+  <circle cx="250" cy="100" r="40" fill="#f39c12" />
+  <rect x="280" y="150" width="80" height="100" fill="#34495e" />
+  <text x="200" y="280" font-family="Arial" font-size="20" text-anchor="middle" fill="#2c3e50">Projeto Educação</text>
+</svg>
