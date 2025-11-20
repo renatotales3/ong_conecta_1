@@ -1,45 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma para ONGs - Conectando propósitos e transformando vidas.">
-    <title>ONG Conecta - Página Inicial</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/logo.svg" alt="Logo ONG Conecta" width="200" height="50">
-                </a>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Institucional</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#sobre" class="dropdown-item">Sobre</a></li>
-                            <li><a href="#historico" class="dropdown-item">Histórico</a></li>
-                            <li><a href="#equipe" class="dropdown-item">Equipe</a></li>
-                            <li><a href="#transparencia" class="dropdown-item">Transparência</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
-                    <li class="nav-item"><a href="cadastro.html" class="nav-link">Participe</a></li>
-                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-                <button class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
+export default function renderHome() {
+    return `
         <section id="sobre" class="hero-section">
             <header>
                 <h1>Sobre a Organização</h1>
@@ -111,13 +71,5 @@
                 <p><strong>Telefone:</strong> (11) 99999-9999</p>
             </address>
         </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 ONG Conecta. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-    <script type="module" src="assets/js/main.js"></script>
-</body>
-</html>
+    `;
+}
