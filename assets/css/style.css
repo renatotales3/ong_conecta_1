@@ -22,13 +22,15 @@
 .valores-grid article {
     background: var(--color-background);
     padding: var(--spacing-md);
-    border-radius: 8px;
+    border-radius: var(--border-radius-md);
     text-align: center;
     transition: transform 0.3s;
+    border: 1px solid var(--color-border);
 }
 
 .valores-grid article:hover {
     transform: scale(1.05);
+    box-shadow: var(--shadow-md);
 }
 
 /* Projetos */
@@ -40,9 +42,9 @@
 
 .indicadores {
     background: var(--color-background);
-    padding: var(--spacing-sm);
-    border-radius: 4px;
-    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    margin: var(--spacing-md) 0;
 }
 
 .indicadores ul {
@@ -55,6 +57,6 @@ footer {
     background-color: var(--color-secondary-dark);
     color: var(--color-white);
     text-align: center;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) 0;
     margin-top: auto;
 }

@@ -1,35 +1,57 @@
 :root {
-    /* Paleta de Cores */
-    --color-primary: #27ae60;
-    --color-primary-dark: #219150;
-    --color-secondary: #2980b9;
-    --color-secondary-dark: #2c3e50;
-    --color-accent: #f39c12;
-    --color-danger: #e74c3c;
-    --color-success: #2ecc71;
-    --color-text: #333333;
-    --color-text-light: #7f8c8d;
-    --color-background: #f4f4f4;
+    /* Paleta de Cores - Modern & Professional */
+    --color-primary: #0F766E;       /* Teal 700 */
+    --color-primary-light: #14B8A6; /* Teal 500 */
+    --color-primary-dark: #115E59;  /* Teal 800 */
+    
+    --color-secondary: #334155;     /* Slate 700 */
+    --color-secondary-dark: #0F172A;/* Slate 900 */
+    
+    --color-accent: #F59E0B;        /* Amber 500 */
+    --color-accent-hover: #D97706;  /* Amber 600 */
+    
+    --color-danger: #EF4444;
+    --color-success: #10B981;
+    
+    --color-text: #334155;          /* Slate 700 */
+    --color-text-light: #64748B;    /* Slate 500 */
+    --color-text-heading: #0F172A;  /* Slate 900 */
+    
+    --color-background: #F8FAFC;    /* Slate 50 */
+    --color-surface: #FFFFFF;       /* White */
+    --color-border: #E2E8F0;        /* Slate 200 */
     --color-white: #ffffff;
-    --color-border: #ddd;
 
     /* Tipografia */
-    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-size-xs: 0.75rem;  /* 12px */
-    --font-size-sm: 0.875rem; /* 14px */
-    --font-size-md: 1rem;     /* 16px */
-    --font-size-lg: 1.25rem;  /* 20px */
-    --font-size-xl: 1.5rem;   /* 24px */
-    --font-size-xxl: 2rem;    /* 32px */
-    --font-size-hero: 3rem;   /* 48px */
+    --font-family-base: 'Inter', 'Segoe UI', sans-serif;
+    --font-family-heading: 'Poppins', 'Segoe UI', sans-serif;
+    
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-xxl: 1.5rem;
+    --font-size-hero: 3rem;
 
     /* Espaçamento Modular */
-    --spacing-xs: 8px;
-    --spacing-sm: 16px;
-    --spacing-md: 24px;
-    --spacing-lg: 32px;
-    --spacing-xl: 48px;
-    --spacing-xxl: 64px;
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;     /* 16px */
+    --spacing-md: 1.5rem;   /* 24px */
+    --spacing-lg: 2rem;     /* 32px */
+    --spacing-xl: 3rem;     /* 48px */
+    --spacing-xxl: 5rem;    /* 80px */
+
+    /* Design Tokens */
+    --border-radius-sm: 0.375rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    --border-radius-full: 9999px;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
     /* Breakpoints (referência para media queries) */
     --breakpoint-xs: 480px;
@@ -42,28 +64,52 @@
 /* Modo Alto Contraste */
 body.high-contrast {
     --color-primary: #000000;
+    --color-primary-light: #333333;
     --color-primary-dark: #000000;
+    
     --color-secondary: #000000;
     --color-secondary-dark: #000000;
+    
     --color-accent: #FFFF00;
+    --color-accent-hover: #CCCC00;
+    
     --color-danger: #FF0000;
     --color-success: #00FF00;
+    
     --color-text: #000000;
     --color-text-light: #000000;
+    --color-text-heading: #000000;
+    
     --color-background: #FFFFFF;
-    --color-white: #FFFFFF;
+    --color-surface: #FFFFFF;
     --color-border: #000000;
+    
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
 }
 
-/* Modo Escuro (Opcional, mas bom para acessibilidade visual) */
+/* Dark Mode */
 body.dark-mode {
-    --color-primary: #2ecc71;
-    --color-primary-dark: #27ae60;
-    --color-secondary: #3498db;
-    --color-secondary-dark: #1a252f;
-    --color-text: #ecf0f1;
-    --color-text-light: #bdc3c7;
-    --color-background: #2c3e50;
-    --color-white: #34495e;
-    --color-border: #7f8c8d;
+    --color-primary: #2DD4BF;       /* Teal 400 */
+    --color-primary-light: #5EEAD4; /* Teal 300 */
+    --color-primary-dark: #14B8A6;  /* Teal 500 */
+    
+    --color-secondary: #94A3B8;     /* Slate 400 */
+    --color-secondary-dark: #F8FAFC;/* Slate 50 */
+    
+    --color-accent: #FBBF24;        /* Amber 400 */
+    --color-accent-hover: #F59E0B;  /* Amber 500 */
+    
+    --color-text: #E2E8F0;          /* Slate 200 */
+    --color-text-light: #94A3B8;    /* Slate 400 */
+    --color-text-heading: #F8FAFC;  /* Slate 50 */
+    
+    --color-background: #0F172A;    /* Slate 900 */
+    --color-surface: #1E293B;       /* Slate 800 */
+    --color-border: #334155;        /* Slate 700 */
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
 }

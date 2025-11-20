@@ -1,13 +1,22 @@
 /* Header e Navegação */
 header {
-    background-color: var(--color-secondary-dark);
-    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--color-text-heading);
     padding: var(--spacing-sm) 0;
     position: sticky;
     top: 0;
-    z-index: 9999; /* Z-Index altíssimo para garantir que fique sempre no topo */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 100%; /* Garante largura total */
+    z-index: 9999;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Dark Mode Header Support */
+body.dark-mode header {
+    background-color: rgba(15, 23, 42, 0.9); /* Slate 900 with opacity */
+    border-bottom: 1px solid var(--color-border);
 }
 
 header .container {
@@ -19,7 +28,7 @@ header .container {
 /* Menu Desktop */
 .nav-menu {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
     align-items: center;
 }
 
@@ -28,10 +37,17 @@ header .container {
 }
 
 .nav-link {
-    color: var(--color-white);
-    font-weight: 600;
+    color: var(--color-text-heading);
+    font-weight: 500;
     padding: var(--spacing-xs) 0;
     position: relative;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
 }
 
 .nav-link::after {
@@ -39,10 +55,11 @@ header .container {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     background-color: var(--color-primary);
-    transition: width 0.3s;
+    transition: width 0.3s ease;
+    border-radius: var(--border-radius-full);
 }
 
 .nav-link:hover::after {

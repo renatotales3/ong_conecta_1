@@ -1,3 +1,6 @@
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 /* Reset e Base */
 * {
     margin: 0;
@@ -7,22 +10,25 @@
 
 body {
     font-family: var(--font-family-base);
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--color-text);
     background-color: var(--color-background);
     font-size: var(--font-size-md);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+    border-radius: var(--border-radius-md);
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 ul {
@@ -31,18 +37,29 @@ ul {
 
 /* Tipografia Base */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
     margin-bottom: var(--spacing-sm);
-    color: var(--color-secondary-dark);
+    color: var(--color-text-heading);
     line-height: 1.2;
+    font-weight: 700;
 }
 
-h1 { font-size: var(--font-size-hero); }
-h2 { font-size: var(--font-size-xxl); }
+h1 { 
+    font-size: var(--font-size-hero); 
+    letter-spacing: -0.02em;
+}
+
+h2 { 
+    font-size: var(--font-size-xxl); 
+    letter-spacing: -0.01em;
+}
+
 h3 { font-size: var(--font-size-xl); }
 h4 { font-size: var(--font-size-lg); }
 
 p {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    max-width: 70ch; /* Melhor legibilidade */
 }
 
 /* Acessibilidade */
