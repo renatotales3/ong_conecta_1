@@ -11,27 +11,43 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="assets/img/logo.svg" alt="Logo ONG Conecta" width="200" height="50">
+                <a href="index.html">
+                    <img src="assets/img/logo.svg" alt="Logo ONG Conecta" width="200" height="50">
+                </a>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Institucional</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#sobre" class="dropdown-item">Sobre</a></li>
+                            <li><a href="#historico" class="dropdown-item">Histórico</a></li>
+                            <li><a href="#equipe" class="dropdown-item">Equipe</a></li>
+                            <li><a href="#transparencia" class="dropdown-item">Transparência</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link">Participe</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section id="sobre">
+        <section id="sobre" class="hero-section">
             <header>
-                <h2>Sobre a Organização</h2>
+                <h1>Sobre a Organização</h1>
             </header>
             <div>
                 <p>A ONG Conecta é uma organização dedicada a fortalecer o terceiro setor brasileiro, fornecendo tecnologia e recursos para que outras organizações possam ampliar seu impacto social.</p>
                 <figure>
-                    <img src="assets/img/hero-institucional.svg" alt="Equipe da ONG trabalhando em conjunto" width="800" height="400">
+                    <img src="assets/img/hero-institucional.svg" alt="Equipe da ONG trabalhando em conjunto" width="800" height="400" style="margin: 0 auto;">
                     <figcaption>Nossa equipe em ação transformando realidades.</figcaption>
                 </figure>
             </div>
@@ -116,5 +132,6 @@
             <p>&copy; 2025 ONG Conecta. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
