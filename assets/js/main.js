@@ -1,6 +1,10 @@
 import { initRouter } from './router.js';
+import { initAccessibility } from './utils/accessibility.js';
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Accessibility Features
+    initAccessibility();
+
     // Initialize Router (SPA)
     initRouter();
 

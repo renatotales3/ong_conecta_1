@@ -38,3 +38,32 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
 }
+
+/* Modo Alto Contraste */
+body.high-contrast {
+    --color-primary: #000000;
+    --color-primary-dark: #000000;
+    --color-secondary: #000000;
+    --color-secondary-dark: #000000;
+    --color-accent: #FFFF00;
+    --color-danger: #FF0000;
+    --color-success: #00FF00;
+    --color-text: #000000;
+    --color-text-light: #000000;
+    --color-background: #FFFFFF;
+    --color-white: #FFFFFF;
+    --color-border: #000000;
+}
+
+/* Modo Escuro (Opcional, mas bom para acessibilidade visual) */
+body.dark-mode {
+    --color-primary: #2ecc71;
+    --color-primary-dark: #27ae60;
+    --color-secondary: #3498db;
+    --color-secondary-dark: #1a252f;
+    --color-text: #ecf0f1;
+    --color-text-light: #bdc3c7;
+    --color-background: #2c3e50;
+    --color-white: #34495e;
+    --color-border: #7f8c8d;
+}
