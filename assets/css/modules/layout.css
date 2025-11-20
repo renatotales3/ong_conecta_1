@@ -23,11 +23,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Previne scroll horizontal indesejado */
 }
 
 main {
     flex: 1;
     padding: var(--spacing-lg) 0;
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique abaixo do header (que terá z-index maior) */
 }
 
 section {
@@ -36,6 +39,7 @@ section {
     padding: var(--spacing-lg);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative; /* Contexto local */
 }
 
 /* Responsividade do Grid */

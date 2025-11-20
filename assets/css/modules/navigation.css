@@ -5,8 +5,9 @@ header {
     padding: var(--spacing-sm) 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999; /* Z-Index altíssimo para garantir que fique sempre no topo */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%; /* Garante largura total */
 }
 
 header .container {
@@ -88,6 +89,9 @@ header .container {
     cursor: pointer;
     flex-direction: column;
     gap: 4px;
+    background: none;
+    border: none;
+    padding: 5px;
 }
 
 .bar {
@@ -95,47 +99,75 @@ header .container {
     height: 3px;
     background-color: var(--color-white);
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 /* Responsividade Navegação */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        z-index: 1001; /* Acima do menu */
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px; /* Altura do header */
+        top: 0;
         left: -100%;
         flex-direction: column;
         background-color: var(--color-secondary-dark);
         width: 100%;
-        height: calc(100vh - 70px);
-        padding: var(--spacing-lg);
-        transition: 0.3s;
-        gap: var(--spacing-lg);
+        height: 100vh; /* Ocupa toda a altura */
+        padding: 80px var(--spacing-lg) var(--spacing-lg) var(--spacing-lg); /* Padding top compensa o header */
+        transition: 0.3s ease-in-out;
+        gap: var(--spacing-md);
+        overflow-y: auto; /* Permite scroll dentro do menu se for muito longo */
+        box-shadow: none;
     }
 
     .nav-menu.active {
         left: 0;
+        box-shadow: 0 0 0 1000px rgba(0,0,0,0.5); /* Overlay escuro no resto (se houvesse) */
     }
 
+    /* Animação do Hambúrguer */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Dropdown Mobile */
     .dropdown-menu {
         position: static;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
         transform: none;
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(0, 0, 0, 0.2); /* Fundo mais escuro para destaque */
         box-shadow: none;
-        margin-top: var(--spacing-xs);
-        display: none;
+        margin-top: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+        overflow: hidden;
     }
     
-    .nav-item:hover .dropdown-menu {
+    /* Abre com hover (se suportado) ou com classe .active (JS) */
+    .nav-item:hover .dropdown-menu,
+    .nav-item.active .dropdown-menu {
         display: block;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding: var(--spacing-xs) 0;
+        margin-top: var(--spacing-xs);
     }
 
     .dropdown-item {
         color: var(--color-white);
+        padding-left: var(--spacing-lg); /* Indentação para hierarquia */
     }
 }
